@@ -25,7 +25,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     let gamesArr;
-    this.apiData = this.apiService.getData('https://cms.crocobet.com/integrations/v2/slot/categories?include=games').subscribe(api => {
+    this.apiData = this.apiService.getCategories().subscribe(api => {
       gamesArr = api.data.filter((data: any) => {
         return data.name === "პოპულარული მთავარზე / ვები" || data.name === "ახალი თამაშები" || data.name === "BUY BONUS"
       })
