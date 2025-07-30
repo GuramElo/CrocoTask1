@@ -1,3 +1,7 @@
+# 1. Generate the SSH key pair. # IMPORTANT: Replace the email address with your own. ssh-keygen -t rsa -b 4096 -C "your_email@example.com" # 2. Set the SSH agent service to start automatically. Get-Service -Name ssh-agent | Set-Service -StartupType Automatic # 3. Start the SSH agent service. Start-Service ssh-agent # 4. Add the private key to the agent. # You will be prompted for your passphrase if you set one. ssh-add ~\.ssh\id_rsa # 5. Copy the public key to your clipboard. Get-Content ~\.ssh\id_rsa.pub | Set-Clipboard # 6. Print a confirmation message. Write-Host "✅ Public key has been copied to your clipboard."
+
+
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
